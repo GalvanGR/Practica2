@@ -1,0 +1,153 @@
+body{  /*Aplica a toda la hoja*/
+	background-color: #e0e5ce;   /* color de fondo*/
+	color: #a2897c ;                 /*color de texto*/
+}
+
+#barra a{  /* Aplica a las estiquetas a*/
+	text-decoration: none ;     /*efectos de texto*/
+	color: darkorange;         /*color de texto*/    
+}
+
+#contenido a:hover{ /*aplica cuando movemos el cursor sobre el contenido de la etiqueta a*/
+	text-decoration: underline;
+	color: black;
+}
+
+img{  /*aplica a las imagenes*/
+	width: 100%;   /*anchura*/
+}
+
+#barra{   /*aplica a elementos con id "barra"*/
+	background: #000;  /* color de fondo*/
+	position: absolute;   /*tomara todo el espacio*/
+	left: 0; /*para que no se mueva de su lugar*/
+	top: 0;  /*tope del limite superior izq*/
+	display: block; /*visualizar como un bloque*/
+	width: 100%;   /*anchura*/
+	z-index: 100; /* orden de los elementos*/
+	overflow: hidden; /*si cambia la dimensión aplica un apilamiento*/
+}
+
+#barra ul{  /*aplica al formato de la lista perteneciente al identificador "barra"*/
+	list-style-type: none;   /*estilos especificos de numeración*/
+	margin: 0;
+	padding: 0;
+	overflow: hidden;   /*si hay cambio de dimensión se apilarian los componetes*/
+	z-index: 100; /* orden de los elementos*/
+}
+
+#barra li{   /*aplica a los elementos de lista pertenecientes al identificador "barra"*/
+	float: left;   /*posiciona los elementos flotantes haca la izquierda*/
+}
+
+#barra li a{     /*aplica la etiqueta "a" de los elementos de lista pertenecientes al identificador "barra"*/
+	padding: 30px;           /*espacio entre elementos*/
+	display: inline-block;   /*apariencia en bloque*/
+	text-decoration: none;   /*efectos de texto*/
+	font-size: 1em;     /*tamaño de letra, en este caso es la más pequeña*/
+	/*text-align: left;*/
+	color: aliceblue;   /*no me gustó el efecto*/
+}
+
+#barra li a:hover{     /*elementos de la lista con etiqueta "a" en el momento de pasar el cursor*/
+	background-color: coral;  /*color de fondo*/
+	color: black;            /*color de texto*/
+}
+
+
+
+
+#contenido{      /* identificador "contenido"*/
+	max-width: 1200px;   /*ancho maximo*/
+	position: relative;  /* posición respecto a los bordes*/
+	top: 80px;   /*distancia con el limite superior*/
+	margin: 0 auto;    /*margen ninguno, con el resto es automatico*/
+	background-color: #d8b578;     /*color de fondo*/
+	padding: 2%;     /*espaciado */
+}
+
+#contenido header{     /* identificador "contenido" en su elemento "header"*/
+	height: 120px;  /*alto*/
+	padding: 10px 20px;  /*espaciado superior-inferior y a los lados*/
+	background-color: #ddd; /*color de fondo*/
+	border-radius: 1em;    /*borde redondeado*/
+}
+
+#principal{
+	width: 35%;   /*ancho*/
+	float: left;  /*ubicar a la izquierda*/
+	padding: 4px; /* espaciado*/
+}
+
+#secundario{
+	width: 35%;   /*ancho*/
+	float: left;  /*ubicar a la izquierda*/
+	padding: 4px; /* espaciado*/
+}
+
+#contenido aside{
+	width: 20%;   /*ancho*/
+	float: left;  /*ubicar a la izquierda*/
+	padding: 4px; /* espaciado*/
+}
+
+#contenido footer{
+	clear: both;   /*limpia el espacio aun con elementos flotantes*/
+	width: 100%;
+	background-color: #ddd;
+	height: 100px;
+	padding: 0px;
+	border-radius: 1em;    /*borde redondeado*/
+	}
+
+	/* el uso de Mediaqueries se aplica al necesitar responsibidad */
+@media screen and (max-width: 820px) {
+	/* se recomienda que apliquemos queries solo con propiedades de tamaño y no afecten a la estructura de la página */
+
+	#contenido{
+		padding: 0;
+		max-width: 100%;
+	}
+
+	#principal{
+		padding: 3%;
+		width: 40%;
+	}
+
+	#secundario{
+		float: right;
+		padding: 3%;
+		width: 40%;
+	}
+
+	#contenido aside{
+		clear: both; 
+		padding: 0%;
+		width: 100%;
+	}
+
+	#contenido footer{
+		 
+		padding: 0%;
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+
+#contenido{
+
+	width: auto;
+
+}
+
+#principal{
+	width: auto;
+	float: none;
+	margin: 0px;
+}
+
+
+
+}
